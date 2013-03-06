@@ -458,7 +458,7 @@ conn_is_datestyle_ok(PGconn *pgconn)
 
     /* pgbouncer does not pass on DateStyle */
     if (ds == NULL)
-      return 0;
+      return 1;
 
     /* Return true if ds starts with "ISO"
      * e.g. "ISO, DMY" is fine, "German" not. */
